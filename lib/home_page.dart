@@ -21,7 +21,51 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Body Mass Index'), centerTitle: true),
-      drawer: Drawer(),
+      drawer: Drawer(
+        child: (ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            UserAccountsDrawerHeader(accountName: Text("Shabbir Ahmed"),
+             accountEmail: Text('Shabbir@gmail.com'),
+             currentAccountPicture: CircleAvatar(
+               backgroundColor: Colors.lightGreenAccent,
+               child: Text('SA',
+               style: TextStyle(fontSize: 30.0),
+               )
+             ),
+             ),
+              ListTile(
+                
+                leading: Icon(Icons.home),
+                title: Text('Home'),
+                tileColor: Colors.amber,
+
+                trailing: Icon(Icons.arrow_forward_ios_rounded,
+              ),
+              ),
+
+              ListTile(
+                leading: Icon(Icons.people),
+                title: Text('About Us'),
+                tileColor: Colors.amber,
+
+                trailing: Icon(Icons.arrow_forward_ios_rounded,
+              ),
+              ),
+
+              ListTile(
+                leading: Icon(Icons.logout_outlined),
+                title: Text('Log Out'),
+                tileColor: Colors.amber,
+
+                trailing: Icon(Icons.arrow_forward_ios_rounded,
+              ),
+              ),
+
+
+          ],
+        )),
+      ),
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

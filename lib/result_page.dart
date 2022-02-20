@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class ResultPage extends StatelessWidget {
   const ResultPage({
     Key? key,
@@ -24,6 +25,7 @@ class ResultPage extends StatelessWidget {
       resultText = 'Thin';
     return resultText;
   }
+
 
   @override
   Widget build(BuildContext context) {
